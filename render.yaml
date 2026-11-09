@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: stockroom-retail
+    runtime: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn config.wsgi:application
+    healthCheckPath: /
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: stockroom-db
+          property: connectionString
+databases:
+  - name: stockroom-db
+    databaseName: stockroom
+    user: stockroom
