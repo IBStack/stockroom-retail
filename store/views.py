@@ -154,6 +154,7 @@ def receive_purchase_order(request, pk):
 
 
 @staff_required
+@transaction.atomic
 def stock_adjustments(request):
     if request.method == 'POST':
         try:
