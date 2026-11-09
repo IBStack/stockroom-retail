@@ -5,4 +5,6 @@
 - [x] Checkout supports cash, card, and transfer payments, decrements stock atomically, and blocks quantities above available stock.
 - [x] Production deployment files support Gunicorn, WhiteNoise, PostgreSQL, and Render Blueprint deployment.
 - [x] Push the completed project to the user’s GitHub account once the authenticated GitHub target is available.
-- [ ] Complete external Render deployment after the repository is connected to the user’s Render account.
+- [x] Complete external Render deployment after the repository is connected to the user’s Render account.
+- [x] Add the market-ready RMS slice: customer profiles, vendor purchasing, receiving, adjustments, returns, and management reporting.
+- [ ] Push and verify the RMS slice on the live Render service.
