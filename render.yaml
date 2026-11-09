@@ -2,6 +2,7 @@ services:
   - type: web
     name: stockroom-retail
     runtime: python
+    plan: free
     buildCommand: ./build.sh
     startCommand: gunicorn config.wsgi:application
     healthCheckPath: /
@@ -20,3 +21,4 @@ databases:
   - name: stockroom-db
     databaseName: stockroom
     user: stockroom
+    plan: free
